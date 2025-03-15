@@ -1,0 +1,14 @@
+---
+- name: installing nginx
+  hosts: master
+  become: true
+  tasks:
+  - name: installing nginx
+    script: script4.sh
+
+- name: installing apache2
+  hosts: slave
+  become: true
+  tasks:
+  - name: installing apache2
+    script: script5.sh
